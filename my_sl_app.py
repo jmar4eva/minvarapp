@@ -15,7 +15,7 @@ yf.pdr_override() # <== that's all it takes :-)
 start_date = st.text_input('Input start date here [YYYY-MM-DD]')#"2011-01-01"
 
 end_date = st.text_input('Input end date here [YYYY-MM-DD]') #"2021-01-01"
-frequency = st.selectbox('Select frequency',    ('1d', '5d', '1mo', '3mo', '6mo', '1y', '2y', '5y', '10y', 'ytd', 'max')) #'1mo'
+frequency = st.selectbox('Select frequency',    ('1d', '5d', '1mo', '3mo')) #'1mo'
 tickers = st.multiselect('Select tickers', ('^FTSE', '^GSPC', '^DJI', '^IXIC', '^GDAXI', '^FCHI', '^N225', '^HSI', '000001.SS', '399001.SZ', '^AXJO', '^GSPTSE', '^JN0U.JO', '^RUT', '^VIX', '^STOXX50E', '^N100', '^BFX', 'IMOEX.ME', '^NYA', '^XAX', '^STI', '^AORD', '^BSESN', '^JKSE', '^KLSE', '^NZ50', '^KS11', '^TWII', '^BVSP', '^MXX', '^IPSA', '^MERV', '^TA125.TA', '^CASE30', '^NSEI', 'FTSEMIB.MI'))
 #['^FTSE', '^VIX', '^N100', 'IMOEX.ME', '^GDAXI']
 
