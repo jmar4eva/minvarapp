@@ -9,15 +9,15 @@ from dateutil.relativedelta import relativedelta
 import numpy as np
 from numpy import linalg
 import streamlit as st
-#import streamlit_analytics
+import streamlit_analytics
 
 yf.pdr_override() 
 
-#with streamlit_analytics.track():
-start_date = st.text_input('Input start date here [YYYY-MM-DD]')
-end_date = st.text_input('Input end date here [YYYY-MM-DD]') 
-frequency = st.selectbox('Select frequency',    ('1d', '5d', '1mo', '3mo')) 
-tickers = st.multiselect('Select tickers', ('^FTSE', '^GSPC', '^DJI', '^IXIC', '^GDAXI', '^FCHI', '^N225', '^HSI', '000001.SS', '399001.SZ', '^AXJO', '^GSPTSE', '^JN0U.JO', '^RUT', '^VIX', '^STOXX50E', '^N100', '^BFX', 'IMOEX.ME', '^NYA', '^XAX', '^STI', '^AORD', '^BSESN', '^JKSE', '^KLSE', '^NZ50', '^KS11', '^TWII', '^BVSP', '^MXX', '^IPSA', '^MERV', '^TA125.TA', '^CASE30', '^NSEI', 'FTSEMIB.MI'))
+with streamlit_analytics.track():
+    start_date = st.text_input('Input start date here [YYYY-MM-DD]')
+    end_date = st.text_input('Input end date here [YYYY-MM-DD]') 
+    frequency = st.selectbox('Select frequency',    ('1d', '5d', '1mo', '3mo')) 
+    tickers = st.multiselect('Select tickers', ('^FTSE', '^GSPC', '^DJI', '^IXIC', '^GDAXI', '^FCHI', '^N225', '^HSI', '000001.SS', '399001.SZ', '^AXJO', '^GSPTSE', '^JN0U.JO', '^RUT', '^VIX', '^STOXX50E', '^N100', '^BFX', 'IMOEX.ME', '^NYA', '^XAX', '^STI', '^AORD', '^BSESN', '^JKSE', '^KLSE', '^NZ50', '^KS11', '^TWII', '^BVSP', '^MXX', '^IPSA', '^MERV', '^TA125.TA', '^CASE30', '^NSEI', 'FTSEMIB.MI'))
 
 def pull_yf_data_multiple_tickers(tickers, start_date, end_date, frequency):
     data2 = pd.DataFrame({})
